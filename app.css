@@ -1,0 +1,270 @@
+:root {
+/* --body-font: 'Figtree', sans-serif;
+--p-shade-80: #050B12;
+--p-shade-50: #0e1b2d;
+--p-shade-30: #13263e;
+--p-shade-20: #162b47;
+--primary: #1b3659;
+--p-tint-40: #76869b;
+--p-tint-90: #e8ebee;
+--secondary: #EFA00B;
+--tertiary: #03B5AA;
+--fourth:  #009999; */
+
+--body-font: 'Figtree', sans-serif;
+--p-shade-80: #050B12;
+--p-shade-50: #0e1b2d;
+--p-shade-30: #13263e;
+--p-shade-20: #162b47;
+--primary: 	#30475E;
+--p-tint-40: #A1A1A1;
+--p-tint-90: #DDDDDD;
+--secondary: #F05454;
+--tertiary: #03B5AA;
+--fourth:  #FFD369;
+
+--global-border-radius: 4px;
+--global-transition: all .2s ease-in-out;
+}
+
+html {
+    font-size: 16px;
+}
+
+body{
+    /* font-family: var(--body--font);
+    background-color: var(--primary);
+    color: var(-p-tint-90); */
+
+    font-family: var(--body-font);
+    background-color: var(--primary);
+    color: var(--p-tint-90);
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cointainer{
+    padding: 4rem 2rem;
+}
+
+/*Typography  
+*/
+
+p{
+    margin: 0 0 1.5rem;
+}
+
+h1{
+    font-size: 2.375rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+h2{
+    font-size: 1.75rem;
+    line-height: 1.15;
+    margin: 0 0 0.5rem;
+}
+
+h1{
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0;
+}
+
+small,
+.form-msg,
+.city_country{
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+a{
+    color: var(--secondary);
+    text-decoration: none;
+    transition: var(--global-transition);
+}
+
+a:hover{
+    color: var(--p-tint-90);
+}
+
+b{
+    cursor: pointer;
+    color: var(--fourth);
+    text-decoration: underline;
+    transition: var(--global-transition);
+}
+
+b:hover{
+    color: var(--p-tint-90);
+}
+
+form {
+    width: 100%;
+    margin-bottom: 2rem;
+    max-width: 30rem;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input{
+    border-radius: var(--global-border-radius);
+    border: 0;
+}
+
+input[type= "text"]{
+    height: 2.75rem;
+    background: var(--p-shade-30) url(img/icons8-magnifying-glass.svg) 0.55rem center no-repeat;
+    color: var(--p-tint-90);
+    padding-left: 2.5rem;
+    outline: none;
+    flex-grow: 1;
+    transition: var(--global-transition);
+}
+
+input :focus,
+input :hover{
+    background-color: var(--p-shade-50);
+}
+input::placeholder {
+    color: var(--p-tint-40);
+}
+
+/* form */
+
+.form-row{
+    display: flex;
+    gap: 0.5rem;
+}
+
+form button{
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: var(--global-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--global-transition);
+}
+
+form button:hover{
+    background-color: var(--p-tint-90);
+}
+
+form button:active{
+    background-color: var(--p-shade-50);
+}
+
+.form-msg{
+    background-color: var(--p-shade-20);
+    padding: .5rem 1rem;
+    border-radius: 0 0 var(--global-border-radius) var(--global-border-radius);
+    margin-left: 0.75rem;
+    width: 75%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    z-index: -1;
+    position: relative;
+    transition: var(--global-transition);
+}
+
+.form-msg.visible{
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+/* Header */
+
+.notification{
+    background-color: var(--p-shade-80);
+    padding: 0.5rem 2rem;
+    width: 100%;
+}
+
+.notification p {
+    margin: 0;
+}
+
+/* Cities */
+
+.cities{
+    display: grid;
+    padding: 0;
+    list-style: none;
+    gap: 2rem;
+    margin-bottom: 0 0 4rem;;
+}
+
+.cities li{
+    display: flex;
+    gap: 1.5rem;
+    background-color: white;
+    align-items: center;
+    padding: 1.5rem;
+    color: var(--p-shade-80);
+    border-radius: var(--global-border-radius); 
+    box-shadow: 8px 8px 0px rgb(255, 255, 255, 0.08);
+} 
+
+.city__conditions{
+    color: var(--p-tint-40);
+    margin-bottom: 1rem;
+} 
+
+.city__country{
+    color: white;
+    background-color: var(--tertiary);
+    border-radius: var(--global-border-radius);
+    padding: .125rem .25rem;
+    margin-left: 0.5rem;
+}
+
+
+/* 
+Larger Screens -- 560px + 
+*/
+
+@media screen and (min-width: 560px) {
+    .cities{
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+
+    .cities li{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .city__conditions{
+        margin-bottom: 1.15rem;
+    }
+}
+
+
+/* 
+Larger Screens -- 760px + 
+*/
+
+@media screen and (min-width: 760px) {
+    .notifications{
+        padding: 0.5rem 4rem;
+    }
+
+    .cointainer{
+        padding: 4rem;
+    }
+}
