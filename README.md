@@ -43,4 +43,4 @@ This app uses OpenWeatherMap API. To run it successfully:
    ```
 
 ## Author
-Developed and maintained by [Lalith Kothuru](https://github.com/LALITH0110)).
+Developed and maintained by [Lalith Kothuru](https://github.com/LALITH0110).
