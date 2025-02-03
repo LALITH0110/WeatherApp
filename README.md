@@ -1,4 +1,7 @@
 # WeatherApp
+
+<img width="1132" alt="Screenshot 2025-02-01 at 4 41 27 PM" src="https://github.com/user-attachments/assets/55734534-fdc2-41ef-8962-3fa413ec459e" />
+
 ## Overview
 The Weather App is a web application that allows users to search for weather conditions in any city worldwide. It fetches real-time weather data using the OpenWeatherMap API and displays relevant details such as temperature, weather conditions, and country information.
 
