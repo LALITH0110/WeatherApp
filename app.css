@@ -268,3 +268,55 @@ Larger Screens -- 760px +
         padding: 4rem;
     }
 }
+
+/* Add to app.css */
+.temperature-toggle {
+    margin-bottom: 1rem;
+}
+
+#temp-toggle {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--global-border-radius);
+    cursor: pointer;
+    transition: var(--global-transition);
+}
+
+#temp-toggle:hover {
+    background-color: var(--tertiary);
+}
+
+.additional-info {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--p-tint-40);
+}
+
+/* Add these styles to your existing CSS */
+.location-button {
+    margin-bottom: 2rem;
+}
+
+#get-location {
+    background-color: var(--tertiary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--global-border-radius);
+    cursor: pointer;
+    transition: var(--global-transition);
+    font-family: var(--body-font);
+}
+
+#get-location:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.city__location {
+    color: var(--fourth);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
