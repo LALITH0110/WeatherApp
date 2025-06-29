@@ -39,7 +39,7 @@ The Weather App is a web application that allows users to search for weather con
 
 ## API Configuration
 This app uses OpenWeatherMap API. To run it successfully:
-1. Sign up at OpenWeatherMap and obtain an API key.
+1. Sign up at OpenWeatherMap and obtain an API key
 2. Replace the apikey variable in _app.js_ with your API key:
    ```
    const apikey = 'YOUR_API_KEY_HERE';
